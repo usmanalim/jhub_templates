@@ -41,9 +41,11 @@
 {{ custom_html | safe }}
 {% elif login_service %}
 <div class="service-login">
+  <p align=center>
   <a role="button" class='btn btn-jupyter btn-lg' href='{{authenticator_login_url}}'>
     Sign in with {{login_service}}
   </a>
+  </p>
 </div>
 {% else %}
 <form action="{{login_url}}?next={{next}}" method="post" role="form">
@@ -108,6 +110,7 @@ if (window.location.protocol === "http:") {
 }
 </script>
 
+<div class="container">
 <p align=left>
 <br>
 For questions or concerns about this service, please email <a mailto:ualim@ucalgary.ca>Usman Alim</a>. <br> 
@@ -117,5 +120,6 @@ If you have questions about your homework or project, please contact your TA.
 </p>
 <p align=center>This service is running on the Rapid Access Cloud provided by <a href="www.cybera.ca">Cybera</a>.
 </p>
+</div>
 
 {% endblock %}
