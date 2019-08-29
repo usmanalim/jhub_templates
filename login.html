@@ -10,11 +10,11 @@
 
 {% block login %}
 <div id="login-main" class="container">
-  <p> Testing Template 123 </p>
 {% if custom_html %}
 {{ custom_html | safe }}
 {% elif login_service %}
 <div class="service-login">
+  <h2> Welcome to DATA 60x Jupyter Hub @ UCalgary </h2>
   <a role="button" class='btn btn-jupyter btn-lg' href='{{authenticator_login_url}}'>
     Sign in with {{login_service}}
   </a>
