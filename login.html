@@ -14,9 +14,10 @@
 {{ custom_html | safe }}
 {% elif login_service %}
 <div class="service-login">
-  <h2> Welcome to DATA 60x Jupyter Hub @ UCalgary </h2>
-  <p> This service is for students registered in a DATA 60x course. Login via the button below and 
-      use your UCalgary email address to sign up.
+  <h2> Welcome to the DATA 60x Jupyter Hub @ UCalgary </h2>
+  <p align=left> This service is for students registered in a DATA 60x course. Login via the button 
+  below. You can sign up for an account the first time you login. <strong>You must use your UCalgary email 
+  address to sign up</strong>.
 
   <br>
   <br>
@@ -27,6 +28,26 @@
   <a role="button" class='btn btn-jupyter btn-lg' href='{{authenticator_login_url}}'>
     Sign in with {{login_service}}
   </a>
+
+  <p align=left>
+  Please be mindful of the following:
+  <ul>
+  <li> Each session is restrictred to 512 MB of RAM. This is suitable for small datasets but may 
+       not be adequate for large datasets.
+  <li> Each account has a 2 GB storage limit. 
+  <li> <strong>Your files are not backed up</strong>. It is strongly recommended that you use a service such as 
+       <a href=http://www.github.com>github</a> to synchronize your work.
+  <li> Please be courteous. Stop your server when you are done to make resources available for other users.  
+  </ul>
+
+  <br>
+  For questions or concerns about this service, please email <a mailto:ualim@ucalgary.ca>Usman Alim</a>. <br> 
+  If you have questions about your homework or project, please contact your TA.
+
+  <br>
+  <br>
+  </p>
+  This service is running on the Rapid Access Cloud provided by <a href="www.cybera.ca">Cybera</a>.
 </div>
 {% else %}
 <form action="{{login_url}}?next={{next}}" method="post" role="form">
